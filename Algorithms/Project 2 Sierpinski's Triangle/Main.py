@@ -23,7 +23,7 @@ def fractal(turtle, order, direction):
         turtle.right(60)
         Sierpinski(turtle, order - 1, direction)
 
-def peepeepoopoo(a, b, c, d, e, f ):
+def p(a, b, c, d, e, f ):
     num = (float(d - b) * (e - c)) - float((c - a) * (f - d))
     if num == 0:
         return 0
@@ -50,10 +50,10 @@ def intersection(line1, line2):
     LOney2 = line1[3]
     LTwox2 = line2[1][0]
     LTwoy2 = line2[1][1]
-    pathing1 = peepeepoopoo(LOnex1, LOney1, LOnex2, LOney2, LTwox1, LTwoy1)
-    pathing2 = peepeepoopoo(LOnex1, LOney1, LOnex2, LOney2, LTwox2, LTwoy2)
-    pathing3 = peepeepoopoo(LTwox1, LTwoy1, LTwox2, LTwoy2, LOnex1, LOney1)
-    pathing4 = peepeepoopoo(LTwox1, LTwoy1, LTwox2, LTwoy2, LOnex2, LOney2)
+    pathing1 = p(LOnex1, LOney1, LOnex2, LOney2, LTwox1, LTwoy1)
+    pathing2 = p(LOnex1, LOney1, LOnex2, LOney2, LTwox2, LTwoy2)
+    pathing3 = p(LTwox1, LTwoy1, LTwox2, LTwoy2, LOnex1, LOney1)
+    pathing4 = p(LTwox1, LTwoy1, LTwox2, LTwoy2, LOnex2, LOney2)
     portion1 = LESALAM(LOnex1, LOney1, LTwox1, LTwoy1, LOnex2, LOney2)
     portion2 = LESALAM(LOnex1, LOney1, LTwox2, LTwoy2, LOnex2, LOney2)
     portion3 = LESALAM(LTwox1, LTwoy1, LOnex1, LOney1, LTwox2, LTwoy2)
